@@ -24,7 +24,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #6b6b6b;
 }
-
 body {
-  font-family: system-ui;
+  font-family: 'Cairo', sans-serif;
 }
