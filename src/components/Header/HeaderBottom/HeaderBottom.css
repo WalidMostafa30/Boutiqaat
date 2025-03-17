@@ -1,0 +1,14 @@
+.categoryLink {
+  .categoryDropDown {
+    z-index: 20;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    .categoryDropDown {
+      transform: scaleY(1);
+    }
+  }
+}

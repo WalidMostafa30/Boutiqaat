@@ -1,0 +1,5 @@
+.navLink {
+  &.active {
+    color: var(--main-color);
+  }
+}

@@ -1,0 +1,43 @@
+.celebritiesSwiper {
+  margin-block: 30px;
+  @media screen and (min-width: 992px) {
+    padding: 30px;
+  }
+
+  .celebritiesCard {
+    .cardImg {
+      overflow: hidden;
+      img {
+        width: 100%;
+        transition: all 0.4s ease;
+      }
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &:hover {
+    .swiper-button-prev,
+    .swiper-button-next {
+      opacity: 1;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: black;
+    transition: all 0.3s ease;
+    opacity: 0;
+
+    &:hover {
+      color: var(--main-color);
+    }
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+}

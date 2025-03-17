@@ -1,0 +1,10 @@
+.dropdown {
+  z-index: 20;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.3s ease;
+}
+
+.dropdown.open {
+  transform: scaleY(1);
+}

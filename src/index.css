@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@theme {
+  --color-myGold: var(--main-color);
+}
+
+@layer components {
+  .textHvr {
+    @apply hover:text-myGold duration-300;
+  }
+}
+
+:root {
+  --main-color: #ae9332;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #818181;
+  border-radius: 10px;
+  border: 5px solid white;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6b6b6b;
+}
+
+body {
+  font-family: system-ui;
+}
