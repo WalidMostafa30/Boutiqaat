@@ -9,12 +9,12 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Navigate to="/men" replace />,
-      },
-      {
-        path: "men",
         element: <MenPage />,
       },
+      // {
+      //   path: "men",
+      //   element: <MenPage />,
+      // },
     ],
   },
 ]);
