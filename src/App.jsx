@@ -8,18 +8,21 @@ import loader from "./assets/loader/loader.gif";
 function App() {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const handleLoad = () => setLoading(false);
+useEffect(() => {
+  const timeout = setTimeout(() => setLoading(false), 3000); 
 
-    window.addEventListener("load", handleLoad);
+  window.addEventListener("load", () => setLoading(false)); 
 
-    return () => window.removeEventListener("load", handleLoad);
-  }, []);
+  return () => {
+    clearTimeout(timeout);
+    window.removeEventListener("load", () => setLoading(false));
+  };
+}, []);
   return (
     <>
       {loading ? (
         <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
-          <img width={"150px"} src={loader} />
+          <img loading="lazy" width={"150px"} src={loader} />
         </div>
       ) : (
         <main>
