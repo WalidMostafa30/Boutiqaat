@@ -47,13 +47,22 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             <h2 className="text-2xl font-bold">حمل تطبيق بوتيكات على هاتفك</h2>
             <Link to={"/"} className="hover:underline duration-200">
-              <img src="https://www.boutiqaat.com/assets/images/icon-img/app-1.png" />
+              <img
+                loading="lazy"
+                src="https://www.boutiqaat.com/assets/images/icon-img/app-1.png"
+              />
             </Link>
             <Link to={"/"} className="hover:underline duration-200">
-              <img src="https://www.boutiqaat.com/assets/images/icon-img/app-2.png" />
+              <img
+                loading="lazy"
+                src="https://www.boutiqaat.com/assets/images/icon-img/app-2.png"
+              />
             </Link>
             <Link to={"/"} className="hover:underline duration-200">
-              <img src="https://www.boutiqaat.com/assets/images/icon-img/app-3.png" />
+              <img
+                loading="lazy"
+                src="https://www.boutiqaat.com/assets/images/icon-img/app-3.png"
+              />
             </Link>
           </div>
         </div>

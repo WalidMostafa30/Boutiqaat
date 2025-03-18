@@ -1,5 +1,6 @@
 .navLink {
   &.active {
     color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
   }
 }

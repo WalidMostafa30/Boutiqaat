@@ -25,17 +25,7 @@ const DropDownCategory = () => {
         <div className="border-b border-gray-300 pb-3">
           <div className="w-30">
             <img
-              src="https://v2cdn.boutiqaat.com/media/catalog/category/T-Shirts%20&%20Tanks%20(24388)_2022_10_30_10_48_22_601.jpg"
-              alt="banner"
-              className="w-full h-30 object-cover"
-            />
-          </div>
-          <p className="text-center">تيشيرتات</p>
-        </div>
-        
-        <div className="border-b border-gray-300 pb-3">
-          <div className="w-30">
-            <img
+              loading="lazy"
               src="https://v2cdn.boutiqaat.com/media/catalog/category/T-Shirts%20&%20Tanks%20(24388)_2022_10_30_10_48_22_601.jpg"
               alt="banner"
               className="w-full h-30 object-cover"
@@ -47,6 +37,7 @@ const DropDownCategory = () => {
         <div className="border-b border-gray-300 pb-3">
           <div className="w-30">
             <img
+              loading="lazy"
               src="https://v2cdn.boutiqaat.com/media/catalog/category/T-Shirts%20&%20Tanks%20(24388)_2022_10_30_10_48_22_601.jpg"
               alt="banner"
               className="w-full h-30 object-cover"
@@ -58,6 +49,7 @@ const DropDownCategory = () => {
         <div className="border-b border-gray-300 pb-3">
           <div className="w-30">
             <img
+              loading="lazy"
               src="https://v2cdn.boutiqaat.com/media/catalog/category/T-Shirts%20&%20Tanks%20(24388)_2022_10_30_10_48_22_601.jpg"
               alt="banner"
               className="w-full h-30 object-cover"
@@ -69,6 +61,19 @@ const DropDownCategory = () => {
         <div className="border-b border-gray-300 pb-3">
           <div className="w-30">
             <img
+              loading="lazy"
+              src="https://v2cdn.boutiqaat.com/media/catalog/category/T-Shirts%20&%20Tanks%20(24388)_2022_10_30_10_48_22_601.jpg"
+              alt="banner"
+              className="w-full h-30 object-cover"
+            />
+          </div>
+          <p className="text-center">تيشيرتات</p>
+        </div>
+
+        <div className="border-b border-gray-300 pb-3">
+          <div className="w-30">
+            <img
+              loading="lazy"
               src="https://v2cdn.boutiqaat.com/media/catalog/category/T-Shirts%20&%20Tanks%20(24388)_2022_10_30_10_48_22_601.jpg"
               alt="banner"
               className="w-full h-30 object-cover"

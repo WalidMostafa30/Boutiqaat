@@ -14,9 +14,9 @@ const Header = () => {
       <div className="container mx-auto p-3 flex justify-between items-center">
         <Link to="/">
           <img
+            loading="lazy"
             src="https://www.boutiqaat.com/assets/images/logo/logo-1.webp"
             alt="logo"
-            loading="lazy"
           />
         </Link>
 

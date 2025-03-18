@@ -40,6 +40,7 @@ const SelectCountries = () => {
       className="flex items-center gap-1 cursor-pointer relative"
     >
       <img
+        loading="lazy"
         src={countriesArray[index].img}
         alt={countriesArray[index].name}
         className="w-8"
@@ -58,7 +59,12 @@ const SelectCountries = () => {
             className="flex items-center gap-1 m-2 cursor-pointer textHvr"
             onClick={() => changeIndex(i)}
           >
-            <img src={country.img} alt={country.name} className="w-8" />
+            <img
+              loading="lazy"
+              src={country.img}
+              alt={country.name}
+              className="w-8"
+            />
             <p>{country.name}</p>
           </div>
         ))}

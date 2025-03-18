@@ -7,7 +7,7 @@ import Offers from "../../components/Offers/Offers";
 
 const MenPage = () => {
   return (
-    <section className="pb-10 md:pb-0">
+    <section className="pb-14 md:pb-0">
       <HomeSlider />
       <Celebrities />
       <BoutiqaatPicks />
