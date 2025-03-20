@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-200 hidden md:block">
       <div className="container m-auto p-3">
-        <div className="flex flex-wrap justify-between py-5">
+        <div className="flex flex-wrap justify-between gap-5 py-5">
           <div className="flex flex-col gap-2">
             <h2 className="text-2xl font-bold">احدث الصيحات</h2>
             <Link to={"/"} className="hover:underline duration-200">

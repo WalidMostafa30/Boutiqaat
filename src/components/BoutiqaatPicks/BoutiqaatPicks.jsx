@@ -1,24 +1,70 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { Link } from "react-router-dom";
+import LandingTitle from "../LandingTitle/LandingTitle";
+import Product from "../Product/Product";
 import "./BoutiqaatPicks.css";
-import { SlBag } from "react-icons/sl";
-import { MdZoomOutMap } from "react-icons/md";
-import { IoMdHeartEmpty } from "react-icons/io";
 
 const BoutiqaatPicks = () => {
+  const products = [
+    {
+      id: 1,
+      title: "ايغنايت",
+      description: "مبخر الكتروني - اسود",
+      imgSrc:
+        "https://www.boutiqaat.com/_next/image/?url=https%3A%2F%2Fv2cdn.boutiqaat.com%2Fcdn-cgi%2Fimage%2Fwidth%3D400%2Cheight%3D400%2Cquality%3D80%2Fhttps%3A%2F%2Fv2cdn.boutiqaat.com%2Fmedia%2Fcatalog%2Fproduct%2FO%2FR%2FORL-00005640-1.jpg&w=828&q=75",
+      link: "/",
+      price: 28000,
+      discount: 20,
+    },
+    {
+      id: 2,
+      title: "ذا نورث فيس",
+      description: "جاكيت بومبر مكموردو - اسود",
+      imgSrc:
+        "https://www.boutiqaat.com/_next/image/?url=https%3A%2F%2Fv2cdn.boutiqaat.com%2Fcdn-cgi%2Fimage%2Fwidth%3D400%2Cheight%3D400%2Cquality%3D80%2Fhttps%3A%2F%2Fv2cdn.boutiqaat.com%2Fmedia%2Fcatalog%2Fproduct%2FC%2Fo%2FConf-580293-1.jpg&w=828&q=75",
+      link: "/",
+      price: 142000,
+      discount: 20,
+    },
+    {
+      id: 3,
+      title: "جيفنشي",
+      description: "عطر جنتل مان بوازيه المركز - 100 مل",
+      imgSrc:
+        "https://www.boutiqaat.com/_next/image/?url=https%3A%2F%2Fv2cdn.boutiqaat.com%2Fcdn-cgi%2Fimage%2Fwidth%3D400%2Cheight%3D400%2Cquality%3D80%2Fhttps%3A%2F%2Fv2cdn.boutiqaat.com%2Fmedia%2Fcatalog%2Fproduct%2FF%2FR%2FFR-00002761-1.jpg&w=828&q=75",
+      link: "/",
+      price: 44250,
+      discount: null,
+    },
+    {
+      id: 4,
+      title: "زيرجوف",
+      description: "عطر اربا بورا المركز - 100 مل",
+      imgSrc:
+        "https://www.boutiqaat.com/_next/image/?url=https%3A%2F%2Fv2cdn.boutiqaat.com%2Fcdn-cgi%2Fimage%2Fwidth%3D400%2Cheight%3D400%2Cquality%3D80%2Fhttps%3A%2F%2Fv2cdn.boutiqaat.com%2Fmedia%2Fcatalog%2Fproduct%2FF%2FR%2FFR-00003925-1.jpg&w=828&q=75",
+      link: "/",
+      price: 88000,
+      discount: null,
+    },
+    {
+      id: 5,
+      title: "اورو",
+      description: "مجموعة هومي كراميلو ايدشن - 5 حبات",
+      imgSrc:
+        "https://www.boutiqaat.com/_next/image/?url=https%3A%2F%2Fv2cdn.boutiqaat.com%2Fcdn-cgi%2Fimage%2Fwidth%3D400%2Cheight%3D400%2Cquality%3D80%2Fhttps%3A%2F%2Fv2cdn.boutiqaat.com%2Fmedia%2Fcatalog%2Fproduct%2FI%2F-%2FI-00000172649-R-11.jpg&w=828&q=75",
+      link: "/",
+      price: 34000,
+      discount: 50,
+    },
+  ];
+
   return (
     <div className="container mx-auto p-3">
-      <div className="flex justify-between">
-        <h1 className="text-lg lg:text-3xl font-bold">مختارات بوتيكات</h1>
-        <Link to="/" className="text-myGold underline text-sm lg:text-xl">
-          عرض الكل
-        </Link>
-      </div>
+      <LandingTitle title="مختارات بوتيكات" link="/" />
 
       <Swiper
         slidesPerView={2}
-        spaceBetween={10}
+        spaceBetween={20}
         loop={true}
         navigation={true}
         breakpoints={{
@@ -30,185 +76,11 @@ const BoutiqaatPicks = () => {
         modules={[Navigation]}
         className="boutiqaatPicksSwiper my-3"
       >
-        <SwiperSlide>
-          <div className="boutiqaatPicksCard text-sm lg:text-xl">
-            <div className="cardImg">
-              <div className="actions flex justify-between p-4">
-                <Link to={"/"} className="textHvr flex items-center gap-1">
-                  اشترى الان
-                  <SlBag />
-                </Link>
-                <div className="flex items-center gap-1">
-                  <Link to={"/"} className="textHvr">
-                    <MdZoomOutMap />
-                  </Link>
-
-                  <Link to={"/"} className="textHvr">
-                    <IoMdHeartEmpty />
-                  </Link>
-                </div>
-              </div>
-              <img
-                loading="lazy"
-                src="https://www.boutiqaat.com/_next/image/?url=https%3A%2F%2Fv2cdn.boutiqaat.com%2Fcdn-cgi%2Fimage%2Fwidth%3D400%2Cheight%3D400%2Cquality%3D80%2Fhttps%3A%2F%2Fv2cdn.boutiqaat.com%2Fmedia%2Fcatalog%2Fproduct%2FC%2Fo%2FConf-580293-1.jpg&w=828&q=75"
-              />
-            </div>
-            <h2 className="font-semibold">ايغنايت</h2>
-            <p className="font-semibold">مبخر الكتروني - اسود</p>
-
-            <div className="flex justify-between my-4">
-              <div>
-                <p className="text-red-500 line-through">28,000 KWD</p>
-                <p>22,400 KWD</p>
-              </div>
-              <span className="bg-red-500 text-white p-1 md:p-2 content-center">20%</span>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="boutiqaatPicksCard text-sm lg:text-xl">
-            <div className="cardImg">
-              <div className="actions flex justify-between p-4">
-                <Link to={"/"} className="textHvr flex items-center gap-1">
-                  اشترى الان
-                  <SlBag />
-                </Link>
-                <div className="flex items-center gap-1">
-                  <Link to={"/"} className="textHvr">
-                    <MdZoomOutMap />
-                  </Link>
-
-                  <Link to={"/"} className="textHvr">
-                    <IoMdHeartEmpty />
-                  </Link>
-                </div>
-              </div>
-              <img
-                loading="lazy"
-                src="https://www.boutiqaat.com/_next/image/?url=https%3A%2F%2Fv2cdn.boutiqaat.com%2Fcdn-cgi%2Fimage%2Fwidth%3D400%2Cheight%3D400%2Cquality%3D80%2Fhttps%3A%2F%2Fv2cdn.boutiqaat.com%2Fmedia%2Fcatalog%2Fproduct%2FF%2FR%2FFR-00002761-1.jpg&w=828&q=75"
-              />
-            </div>
-            <h2 className="font-semibold">ايغنايت</h2>
-            <p className="font-semibold">مبخر الكتروني - اسود</p>
-
-            <div className="flex justify-between my-4">
-              <div>
-                <p className="text-red-500 line-through">28,000 KWD</p>
-                <p>22,400 KWD</p>
-              </div>
-              <span className="bg-red-500 text-white p-1 md:p-2 content-center">20%</span>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="boutiqaatPicksCard text-sm lg:text-xl">
-            <div className="cardImg">
-              <div className="actions flex justify-between p-4">
-                <Link to={"/"} className="textHvr flex items-center gap-1">
-                  اشترى الان
-                  <SlBag />
-                </Link>
-                <div className="flex items-center gap-1">
-                  <Link to={"/"} className="textHvr">
-                    <MdZoomOutMap />
-                  </Link>
-
-                  <Link to={"/"} className="textHvr">
-                    <IoMdHeartEmpty />
-                  </Link>
-                </div>
-              </div>
-              <img
-                loading="lazy"
-                src="https://www.boutiqaat.com/_next/image/?url=https%3A%2F%2Fv2cdn.boutiqaat.com%2Fcdn-cgi%2Fimage%2Fwidth%3D400%2Cheight%3D400%2Cquality%3D80%2Fhttps%3A%2F%2Fv2cdn.boutiqaat.com%2Fmedia%2Fcatalog%2Fproduct%2FF%2FR%2FFR-00003925-1.jpg&w=828&q=75"
-              />
-            </div>
-            <h2 className="font-semibold">ايغنايت</h2>
-            <p className="font-semibold">مبخر الكتروني - اسود</p>
-
-            <div className="flex justify-between my-4">
-              <div>
-                <p className="text-red-500 line-through">28,000 KWD</p>
-                <p>22,400 KWD</p>
-              </div>
-              <span className="bg-red-500 text-white p-1 md:p-2 content-center">20%</span>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="boutiqaatPicksCard text-sm lg:text-xl">
-            <div className="cardImg">
-              <div className="actions flex justify-between p-4">
-                <Link to={"/"} className="textHvr flex items-center gap-1">
-                  اشترى الان
-                  <SlBag />
-                </Link>
-                <div className="flex items-center gap-1">
-                  <Link to={"/"} className="textHvr">
-                    <MdZoomOutMap />
-                  </Link>
-
-                  <Link to={"/"} className="textHvr">
-                    <IoMdHeartEmpty />
-                  </Link>
-                </div>
-              </div>
-              <img
-                loading="lazy"
-                src="https://www.boutiqaat.com/_next/image/?url=https%3A%2F%2Fv2cdn.boutiqaat.com%2Fcdn-cgi%2Fimage%2Fwidth%3D400%2Cheight%3D400%2Cquality%3D80%2Fhttps%3A%2F%2Fv2cdn.boutiqaat.com%2Fmedia%2Fcatalog%2Fproduct%2FI%2F-%2FI-00000172649-R-11.jpg&w=828&q=75"
-              />
-            </div>
-            <h2 className="font-semibold">ايغنايت</h2>
-            <p className="font-semibold">مبخر الكتروني - اسود</p>
-
-            <div className="flex justify-between my-4">
-              <div>
-                <p className="text-red-500 line-through">28,000 KWD</p>
-                <p>22,400 KWD</p>
-              </div>
-              <span className="bg-red-500 text-white p-1 md:p-2 content-center">20%</span>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="boutiqaatPicksCard text-sm lg:text-xl">
-            <div className="cardImg">
-              <div className="actions flex justify-between p-4">
-                <Link to={"/"} className="textHvr flex items-center gap-1">
-                  اشترى الان
-                  <SlBag />
-                </Link>
-                <div className="flex items-center gap-1">
-                  <Link to={"/"} className="textHvr">
-                    <MdZoomOutMap />
-                  </Link>
-
-                  <Link to={"/"} className="textHvr">
-                    <IoMdHeartEmpty />
-                  </Link>
-                </div>
-              </div>
-              <img
-                loading="lazy"
-                src="https://www.boutiqaat.com/_next/image/?url=https%3A%2F%2Fv2cdn.boutiqaat.com%2Fcdn-cgi%2Fimage%2Fwidth%3D400%2Cheight%3D400%2Cquality%3D80%2Fhttps%3A%2F%2Fv2cdn.boutiqaat.com%2Fmedia%2Fcatalog%2Fproduct%2FO%2FR%2FORL-00005640-1.jpg&w=828&q=75"
-              />
-            </div>
-            <h2 className="font-semibold">ايغنايت</h2>
-            <p className="font-semibold">مبخر الكتروني - اسود</p>
-
-            <div className="flex justify-between my-4">
-              <div>
-                <p className="text-red-500 line-through">28,000 KWD</p>
-                <p>22,400 KWD</p>
-              </div>
-              <span className="bg-red-500 text-white p-1 md:p-2 content-center">20%</span>
-            </div>
-          </div>
-        </SwiperSlide>
+        {products.map((product, index) => (
+          <SwiperSlide key={index}>
+            <Product product={product} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
