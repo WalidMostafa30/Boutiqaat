@@ -5,7 +5,7 @@ import Celebrities from "../../components/Celebrities/Celebrities";
 import FeaturedBrands from "../../components/FeaturedBrands/FeaturedBrands";
 import Footer from "../../components/Footer/Footer";
 import HomeSlider from "../../components/HomeSlider/HomeSlider";
-import LandingOffers from "../../components/landingOffers/landingOffers";
+import LandingOffers from "../../components/LandingOffers/LandingOffers";
 import loader from "../../assets/loader/loader.gif";
 
 const MenPage = () => {
